@@ -1,0 +1,209 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Hangman Game</title>
+    <style></style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="letters"></div>
+      <div id="errors"></div>
+      <button id="btn">Reset</button>
+    </div>
+
+    <div class="photo">
+      <!DOCTYPE html>
+      <svg
+        viewBox="83.137 102.572 205.811 222.834"
+        width="300"
+        height="400"
+        id="photo"
+      >
+        <rect
+          x="83.137"
+          y="308.841"
+          width="116.981"
+          height="16.565"
+          style="
+            fill: rgb(216, 216, 216);
+            stroke: rgb(0, 0, 0);
+            stroke-opacity: 0;
+          "
+        ></rect>
+        <rect
+          x="131.695"
+          y="119.581"
+          width="16.922"
+          height="190.731"
+          style="
+            fill: rgb(216, 216, 216);
+            stroke: rgb(0, 0, 0);
+            stroke-opacity: 0;
+          "
+        ></rect>
+        <rect
+          x="188.714"
+          y="109.828"
+          width="16.922"
+          height="153.031"
+          style="
+            fill: rgb(216, 216, 216);
+            stroke: rgb(0, 0, 0);
+            stroke-opacity: 0;
+          "
+          transform="matrix(0.018011, 0.999838, -1.000178, -0.000855, 391.036377, -84.948509)"
+        ></rect>
+        <rect
+          x="185.035"
+          y="175.63"
+          width="16.922"
+          height="105.315"
+          style="
+            fill: rgb(216, 216, 216);
+            stroke: rgb(0, 0, 0);
+            stroke-opacity: 0;
+          "
+          transform="matrix(0.677472, 0.735548, -0.735548, 0.677472, 216.746826, -148.126602)"
+        ></rect>
+
+        <g id="id6">
+          <ellipse
+            style="
+              fill: rgb(216, 216, 216);
+              stroke: rgb(0, 0, 0);
+              fill-rule: nonzero;
+              paint-order: stroke;
+              stroke-opacity: 0;
+            "
+            cx="267.739"
+            cy="165.682"
+            rx="17.29"
+            ry="17.657"
+          ></ellipse>
+          <path
+            d="M 258.571 215.981 H 260.114 V 219.022 H 263.198 V 220.542 H 260.114 V 223.583 H 258.571 V 220.542 H 255.486 V 219.022 H 258.571 Z"
+            data-bx-shape="cross 255.486 215.981 7.712 7.602 1.52 1.543 0.5 1@86f571de"
+            style="stroke: rgb(0, 0, 0); stroke-opacity: 0.05"
+            transform="matrix(-0.713623, 0.70053, -0.70053, -0.713623, 599.938171, 136.53804)"
+          ></path>
+          <path
+            d="M 258.571 215.981 H 260.114 V 219.022 H 263.198 V 220.542 H 260.114 V 223.583 H 258.571 V 220.542 H 255.486 V 219.022 H 258.571 Z"
+            data-bx-shape="cross 255.486 215.981 7.712 7.602 1.52 1.543 0.5 1@86f571de"
+            style="stroke: rgb(0, 0, 0); stroke-opacity: 0.05"
+            transform="matrix(-0.713623, 0.70053, -0.70053, -0.713623, 613.533081, 136.782852)"
+          ></path>
+          <rect
+            x="261.043"
+            y="174.173"
+            width="13.423"
+            height="0.654"
+            style="fill: rgb(216, 216, 216); stroke: rgb(0, 0, 0)"
+          ></rect>
+          <rect
+            x="263.376"
+            y="102.572"
+            width="8.682"
+            height="20.106"
+            style="stroke: rgb(0, 0, 0)"
+          ></rect>
+          <rect
+            x="267.032"
+            y="114.453"
+            width="1.371"
+            height="33.814"
+            style="
+              stroke: rgb(0, 0, 0);
+              paint-order: fill;
+              stroke-opacity: 0.33;
+              stroke-width: 0px;
+            "
+          ></rect>
+        </g>
+        <!-- BODY-->
+        <rect
+          id="id5"
+          x="265.074"
+          y="182.602"
+          width="4.414"
+          height="47.602"
+          style="
+            fill: rgb(216, 216, 216);
+            stroke: rgb(0, 0, 0);
+            fill-rule: nonzero;
+            paint-order: stroke;
+            stroke-opacity: 0;
+          "
+        ></rect>
+        <!--LEFT HAND-->
+        <rect
+          id="id4"
+          x="208.234"
+          y="128.317"
+          width="3.313"
+          height="34.432"
+          style="
+            fill: rgb(216, 216, 216);
+            stroke: rgb(0, 0, 0);
+            fill-rule: nonzero;
+            paint-order: stroke;
+            stroke-opacity: 0;
+          "
+          transform="matrix(0.816818, 0.576895, -0.576895, 0.816818, 170.75856, -35.488876)"
+        ></rect>
+        <!--RIGHT HAND-->
+        <rect
+          id="id3"
+          x="208.234"
+          y="128.317"
+          width="3.313"
+          height="34.432"
+          style="
+            fill: rgb(216, 216, 216);
+            stroke: rgb(0, 0, 0);
+            fill-rule: nonzero;
+            paint-order: stroke;
+            stroke-opacity: 0;
+          "
+          transform="matrix(-0.790986, 0.611834, -0.611834, -0.790986, 532.166992, 191.533112)"
+        ></rect>
+        <!--LEFT LEG-->
+        <rect
+          id="id2"
+          x="153.66"
+          y="139.344"
+          width="2.445"
+          height="37.391"
+          style="
+            fill: rgb(216, 216, 216);
+            stroke: rgb(0, 0, 0);
+            fill-rule: nonzero;
+            paint-order: stroke;
+            stroke-opacity: 0;
+          "
+          transform="matrix(0.816818, 0.576895, -0.576895, 0.816818, 221.572586, 23.056427)"
+        ></rect>
+        <!--RIGHT LEG-->
+        <rect
+          id="id1"
+          x="148.94"
+          y="135.546"
+          width="2.37"
+          height="36.372"
+          style="
+            fill: rgb(216, 216, 216);
+            stroke: rgb(0, 0, 0);
+            fill-rule: nonzero;
+            paint-order: stroke;
+            stroke-opacity: 0;
+          "
+          transform="matrix(-0.859139, 0.511742, -0.511742, -0.859139, 484.681274, 298.468903)"
+        ></rect>
+      </svg>
+    </div>
+    <script src="./app.js"></script>
+  </body>
+</html>
